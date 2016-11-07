@@ -3,15 +3,6 @@
 <!DOCTYPE html>
 
 <html>
-<head>
-<style>
-
-img {
-    float: left;
-    margin: 0 0 10px 10px;
-}
-</style>
-</head>
 <body>
 
 
@@ -41,8 +32,15 @@ img {
 
 <img src="Pictures/pizza1.jpeg"  alt="pizza" style="width:304px; height:228px" />
 
-<p align="right">
-	Beschrijving
+<p align="center">
+	
+Uw eigen pizza samenstellen? Dat kan! <br />
+Met onze pizza samensteller kan je nu zelf <br />
+pizza maken, kies de ingredienten <br />
+en klik op bestel. <br />
+Het laastste wat U hoeft te doen is genieten <br />
+wanneer u de pizza warm op eet! <br />
+
 </p>
 
 <!--Formulier om pizza samen te stellen:-->
