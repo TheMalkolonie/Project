@@ -1,7 +1,37 @@
-<html>
-	<body></body>
-	<footer>
-	<br/><br/><br/><br/><br/>
-	<font size="3" face="arial">Telefoonnummer: 064391933 &emsp; Adres:Koninglaan 323  ---  E-mail adres: Pizza&Co@hotmail.com --- <a href="CONTACT LINK" value="contact">contact</a> </font>
-</footer>
+<!-- De footer -->
+
+<HTML>
+<h6>
+</body>
+
+<div class="container">
+    <div class="main">
+        
+    </div>
+</div>
+<div class="clear"></div>
+    <div id="footer">
+        <div class="container">
+            <div class="footer_nav">
+                <ul>
+                    <li><font color="white"><p align="left">Groningen </br>
+                    	Zernikeplein 7 </br> 
+                    	9747 AS</br>
+                    	Pizzaenco@pizza.com</br>
+                    	  </li>                                      
+                </ul>
+            </div>
+           
+                
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+
+</h6>
+<!-- Einde van footer -->
+
+
 </html>
+<!-- Einde van footer -->
