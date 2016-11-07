@@ -1,0 +1,117 @@
+# Project
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<style>
+
+img {
+    float: left;
+    margin: 0 0 10px 10px;
+}
+</style>
+</head>
+<body>
+
+
+
+<ul>
+ <a href="link van homepage">
+  <img src="pizza-icon-26.png" alt="Pizza & Co" style="width:70px;height:70px;border:0;"></a>
+  <li><a href="HomePage.php"><font size="6" face="arial">Home</font></a></li>
+   <li class="dropdown">
+    <a href="#" class="dropbtn"><font size="6" face="arial">Pizza's</font></a>
+    <div class="dropdown-content">
+      <a href="#menukaart"><font size="4" face="arial">Menukaart</font></a>
+      <a href="ZelfPizzaMaken.php"><font size="4" face="arial">Zelf Samenstellen</font></a>
+      <li><a href="#desserts"><font size="6" face="arial">Desserts</font></a></li>
+      <li><a href="#drank"><font size="6" face="arial">Drank</font></a></li>
+  
+ 
+      
+    </div>
+  </li>
+</ul>
+
+
+<!--afbeelding die je ziet-->
+
+<h2>  </h2>
+
+<img src="Pictures/pizza1.jpeg"  alt="pizza" style="width:304px; height:228px" />
+
+<p align="right">
+	Beschrijving
+</p>
+
+<!--Formulier om pizza samen te stellen:-->
+
+<!--Bodems-->
+<div align="right">
+<form action="Bestel.php">
+	
+	
+	<select name="Bodem">
+		<option value="Small">Small (25cm)</option>
+		<option value="Medium">Medium (30cm)</option>
+		<option value="Large">Large (35cm)</option>
+	</select>
+	
+
+
+<!--Sauzen-->
+
+	<select name="saus">
+		<option value="Tomaten saus">Tomatensaus</option>
+		<option value="Creme Fraiche">Creme Fraiche</option>
+		<option value="Bbq saus">Bbq saus</option>
+	</select>
+	
+<!--Bestel + aantal-->	
+	
+	<br />
+	<input type="number" value="1" name="Aantal">
+	<input type="submit" value="Bestel!"/>
+</div>
+
+<br />
+<center>
+Prijs komt hier
+</center>
+
+
+<!--Ingredienten-->
+
+	<br />
+	
+	
+<table style="width:100%">
+	<td align="left">
+	<input type="checkbox" name="cheese" value="Mozzarella" checked="Mozzarella"/>Kaas<br/>
+	<input type="checkbox" name="Pepperoni" value="Pepperoni" />Pepperoni<br/>
+	<input type="checkbox" name="Salami" value="Salami" />Salami<br/>
+	<input type="checkbox" name="Gehakt" value="Gehakt" />Gehakt<br/>
+	</td>
+	<td align="left">
+	<input type="checkbox" name="Ui" value="Ui" />Ui<br/>
+	<input type="checkbox" name="Paprika" value="Paprika" />Paprika<br/>
+	<input type="checkbox" name="Champignons" value="Champignons" />Champignons<br/>
+	</td>
+	<td align="left">
+	<input type="checkbox" name="Ansjovis" value="Ansjovis" />Ansjovis<br/>
+	<input type="checkbox" name="Tonijn" value="Tonijn" />Tonijn<br/>
+	</td>
+	<td align="left">
+	<input type="checkbox" name="Olijf" value="Olijf" />Groene Olijf<br/>
+	<input type="checkbox" name="Tomaat" value="Tomaat" />Verse Tomaat<br/>
+	<input type="checkbox" name="Ananas" value="Ananas" />Ananas<br/>
+	</td>
+	
+	
+</table>
+</Form>
+
+</style>
+</head>
+</html>
