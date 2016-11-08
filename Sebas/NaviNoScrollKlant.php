@@ -3,7 +3,6 @@
 <head>
 <style>
 body {margin:0;}
-
 ul {
     list-style-type: none;
     margin: 0;
@@ -12,11 +11,9 @@ ul {
     background-color: #333;
 	
 }
-
 li {
     float: left;
 }
-
 li a {
     display: block;
     color: white;
@@ -24,11 +21,9 @@ li a {
     padding: 14px 16px;
     text-decoration: none;
 }
-
 li a:hover:not(.active) {
     background-color: #111;
 }
-
 .active {
     background-color: #4CAF50;
 }
@@ -51,6 +46,7 @@ li a:hover:not(.active) {
    <li><a><font size="4" face="arial">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</font></a></li>
    <li><a href="logout.php"><font size="4" face="arial">Uitloggen</font></a></li>
    <li><a href="Winkelmandje.php"><img src="images/winkelmandje plaatje.png" alt="Pizza & Co" style="width:30px;height:30px;border:0;"></a></li> 
+   
 </ul>
 
 
