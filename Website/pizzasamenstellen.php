@@ -1,4 +1,11 @@
-<?php include 'NaviNoScroll.php'; ?>
+<?php
+session_start();
+if(!isset($_SESSION['login2'])){
+	include 'NaviScroll.php';
+}
+Else{
+	include 'NaviScrollKlant.php';
+} ?>
 <!DOCTYPE html>
 
 <html>

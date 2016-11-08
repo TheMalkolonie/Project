@@ -20,7 +20,11 @@ if(!isset($_SESSION['login2'])) {
             </div>
             <br />
             <div>
-            <input class="btn btn-large btn-primary" type="" value="Nieuwe bestelling" onclick="location.href = 'http://localhost/pizzaenco/error.php';" />
+            <input class="btn btn-large btn-primary" type="" value="Nieuwe bestelling" onclick="location.href = 'http://localhost/pizzaenco/Menukaart.php';" />
+            </div>
+              <br />
+            <div>
+            <input class="btn btn-large btn-primary" type="" value="Reviews" onclick="location.href = 'http://localhost/pizzaenco/HReview.php';" />
             </div>
             <br />
             <br />

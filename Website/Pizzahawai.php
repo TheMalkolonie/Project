@@ -1,6 +1,11 @@
-<?php include 'NaviNoScroll.php'; 							//Roept de navigatiebalk aan
- 
-?>
+<?php
+session_start();
+if(!isset($_SESSION['login2'])){
+	include 'NaviScroll.php';
+}
+Else{
+	include 'NaviScrollKlant.php';
+} ?>
 
 <!DOCTYPE html>
 <html>
