@@ -3,7 +3,6 @@
 <head>
 <style>
 body {margin:0;}
-
 ul {
     list-style-type: none;
     margin: 0;
@@ -12,28 +11,23 @@ ul {
     background-color: #333;
     position: fixed;
     top: 0;
-    width: 100%;			
+    width: 100%;      
 }
-
 li {
     float: left;
 }
-
 li a {
     display: block;
     color: white;
     padding: 16px;
     text-decoration: none;
 }
-
 li a:hover:not(.active) {
     background-color: #111;
 }
-
 .active {
     background-color: #4CAF50;
 }
-
 .main {
     padding: 16px;
     margin-top: 30px;
@@ -46,7 +40,7 @@ li a:hover:not(.active) {
 
 <ul>
   <li><a href="index.php"><img src="images/Pizza & Co Logo.png" alt="Pizza & Co" style="width:85px;height:85px;border:0;"></a></li> 
-  <li><a><font size="7" face="arial" color="">Pizza & Co</font></a></li>
+  <li><a><font size="7" face="arial" color="">Pizza&Co</font></a></li>
   <li><a><font size="4" face="arial">&emsp;&emsp;&emsp;&emsp;&emsp;</font></a></li>
  
   <li><a href="index.php"><font size="7" face="arial">Home</font></a></li>

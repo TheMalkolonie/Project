@@ -3,41 +3,29 @@
 <head>
 <style>
 body {margin:0;}
-
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0px 0px 0px 0px;
     overflow: hidden;
     background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;			
+  
 }
-
 li {
     float: left;
 }
-
 li a {
     display: block;
     color: white;
-    padding: 16px;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
 }
-
 li a:hover:not(.active) {
     background-color: #111;
 }
-
 .active {
     background-color: #4CAF50;
-}
-
-.main {
-    padding: 16px;
-    margin-top: 30px;
-    height: 1500px; /* Used in this example to enable scrolling */
 }
 </style>
 </head>

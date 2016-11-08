@@ -42,11 +42,11 @@ li a:hover:not(.active) {
 </style>
 </head>
 <body>
-
+<title>Pizza&Co</title>
 
 <ul>
   <li><a href="index.php"><img src="images/Pizza & Co Logo.png" alt="Pizza & Co" style="width:85px;height:85px;border:0;"></a></li> 
-  <li><a><font size="7" face="arial" color="">Pizza & Co</font></a></li>
+  <li><a><font size="7" face="arial" color="">Pizza&Co</font></a></li>
   <li><a><font size="4" face="arial">&emsp;&emsp;&emsp;&emsp;&emsp;</font></a></li>
  
   <li><a href="index.php"><font size="7" face="arial">Home</font></a></li>
@@ -57,7 +57,7 @@ li a:hover:not(.active) {
   
     <li><a><font size="4" face="arial">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</font></a></li>
    <li><a href="logout.php"><font size="4" face="arial">Uitloggen</font></a></li>
-   <li><a href="Winkelmandje.php"><img src="images/winkelmandje plaatje.png" alt="Pizza & Co" style="width:30px;height:30px;border:0;"></a></li> 
+   <li><a href="Winkelmandje.php"><img src="images/winkelmandje plaatje.png" alt="Pizza&Co" style="width:30px;height:30px;border:0;"></a></li> 
    
 </ul>
 
