@@ -56,7 +56,7 @@ li a:hover:not(.active) {
   <li><a href="SnacksPageKlant.php"><font size="7" face="arial">Snacks</font></a></li>
   
    <<li><a><font size="4" face="arial">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</font></a></li>
-   <li><a href="UITLOGLINK"><font size="4" face="arial">Uitloggen</font></a></li>
+   <li><a href="logout.php"><font size="4" face="arial">Uitloggen</font></a></li>
    <li><a href="Winkelmandje.php"><img src="winkelmandje plaatje.png" alt="Pizza & Co" style="width:35px;height:35px;border:0;"></a></li> 
    
 </ul>
