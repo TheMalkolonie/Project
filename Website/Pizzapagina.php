@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-<img src="images/Pizza Plaatje.jpg" alt="Pizza" style="width:1920px;height:675px;">
+<img src="images/Pizza Plaatje.jpg" alt="Pizza" style="width:1920px;height:50%;">
 <!-- Chiel 02/11/16 --> 
 <center><font size="3" face="arial"><a href="pizzasamenstellen.php">Stel je eigen pizza samen!</a></center><br/>
 <center>

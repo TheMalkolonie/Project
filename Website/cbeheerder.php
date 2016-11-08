@@ -1,15 +1,16 @@
  <?php
 session_start();
-include('templates/header2.inc.php');
-include('deletebeh.php');
-include('editbeh.php');
-
 if(!isset($_SESSION['login'])) {
   header('location: alogin.php');
   exit;
-
-  }
-?>
+}
+Else{
+   include 'NaviScrollKlant.php';
+}
+include('templates/header2.inc.php');
+include('deletebeh.php');
+include('editbeh.php');
+ ?>
 <html>
 <body>
 
@@ -59,5 +60,3 @@ if(!isset($_SESSION['login'])) {
 
 </body>
 </html>
-
-

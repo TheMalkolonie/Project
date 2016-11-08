@@ -3,7 +3,13 @@
 <body>
    
 <?php
-include 'NaviNoScroll.php';                   //Roept de navigatiebalk aan
+session_start();
+if(!isset($_SESSION['login2'])){
+  include 'NaviScroll.php';
+}
+Else{
+  include 'NaviScrollKlant.php';
+}
 include('templates/header2.inc.php');
 require('config.php');
 $error = '';

@@ -1,6 +1,5 @@
 <?php
 session_start();
-include 'NaviNoScroll.php';                   //Roept de navigatiebalk aan
 require('config.php');
 include('templates/header2.inc.php');
 $error = '';

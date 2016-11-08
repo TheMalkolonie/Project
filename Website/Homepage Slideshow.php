@@ -8,7 +8,7 @@ body {font-family: Verdana,sans-serif;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1920px;
+  max-width: 100%;
   position: center;
   margin: left;
 }
@@ -67,22 +67,22 @@ body {font-family: Verdana,sans-serif;}
 
 <div class="mySlides fade">
   
-  <img src="images/Pizza Plaatje.jpg" style="width:100%" height="675px" >
+  <img src="images/Pizza Plaatje.jpg" style="width:100%;height:100%;" >
   <div class="text"></div>
 </div>
 
 <div class="mySlides fade">
-  <img src="images/Dessert Plaatje.jpg" style="width:100%" height="675px">
+  <img src="images/Dessert Plaatje.jpg" style="width:100%;height:100%;">
   <div class="text"></div>
 </div>
 
 <div class="mySlides fade"> 
-  <img src="images/Dranken Plaatje.jpg" style="width:100%" height="675px">
+  <img src="images/Drinks.jpg" style="width:100%;height:100%;">
   <div class="text"></div>
 </div>
 
 <div class="mySlides fade">
-  <img src="images/Snacks Plaatje.png" style="width:100%" height="675px">
+  <img src="images/snacks.jpg" style="width:100%;height:50%;">
   <div class="text"></div>
 </div>
 

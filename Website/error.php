@@ -1,4 +1,11 @@
-<?php include 'NaviNoScroll.php';                   //Roept de navigatiebalk aan ?>;
+<?php session_start();
+if(!isset($_SESSION['login'])) {
+  header('location: alogin.php');
+  exit;
+}
+Else{
+   include 'NaviScrollKlant.php';
+} ?>;
 <!DOCTYPE html>
  <?php
 session_start();

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
  <?php
 session_start();
-include 'NaviNoScroll.php';                   //Roept de navigatiebalk aan
 include('templates/header2.inc.php');
 
 if(!isset($_SESSION['login'])) {
   header('location: alogin.php');
   exit;
+}
+Else{
+   include 'NaviScrollKlant.php';
 }
 ?>
 
@@ -43,13 +45,7 @@ if(!isset($_SESSION['login'])) {
             <div>
             <input class="btn btn-large btn-primary" type="" value="Optie" onclick="location.href = 'http://localhost/pizzaenco/error.php';" />
             </div>
-            <br />
-            <br />
-            <br />
-            <div>
-            <input class="btn btn-large btn-primary" type="button" value="Uitloggen" onclick="location.href = 'http://localhost/pizzaenco/logout.php';" />
-            </div>
-            <br />           
+            <br />          
          </form>
       </div>
       <!-- END OF CONTENT PART -->

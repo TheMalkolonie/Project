@@ -1,6 +1,5 @@
 <?php
 session_start();
-include 'NaviNoScroll.php';                   //Roept de navigatiebalk aan
 require('config.php');
 include('templates/header2.inc.php');
 $error = '';
@@ -28,5 +27,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 } else {
    include('logintpl.php');
 include('templates/footer.inc.php');
+include 'Footer2.php'; //Roept Footer aan
 }
 ?>

@@ -125,4 +125,4 @@ Else{
     </div><!-- /.container -->
  </center>   
 </html>
-<?php include 'Footer.php'; ?>
+<?php include 'Footer2.php'; ?>

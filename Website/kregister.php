@@ -4,12 +4,13 @@
    
 <?php
 session_start();
-
 if(!isset($_SESSION['login'])) {
   header('location: alogin.php');
   exit;
 }
-include 'NaviNoScroll.php';                   //Roept de navigatiebalk aan
+Else{
+   include 'NaviScrollKlant.php';
+}
 include('templates/header2.inc.php');
 require('config.php');
 $error = '';

@@ -7,5 +7,5 @@ Else{
 	include 'NaviScrollKlant.php';
 } 
 include 'Pizzapagina.php';					//Roept de informatie van 
-include 'Footer.php';									//Roept Footer aan
+include 'Footer2.php';									//Roept Footer aan
 ?>

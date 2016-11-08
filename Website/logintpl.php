@@ -1,3 +1,11 @@
+<?php 
+session_start();
+if(!isset($_SESSION['login'])){
+   include 'NaviScroll.php';
+}
+Else{
+   include 'NaviScrollKlant.php';
+} ?>
 <!-- BEGIN OF CONTENT PART -->
 <div class="container">
    <form class="form-signin" method="POST" action="">

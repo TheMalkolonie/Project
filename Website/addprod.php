@@ -1,6 +1,13 @@
 <?php
-include 'NaviNoScroll.php';                   //Roept de navigatiebalk aan
 include('config.php');
+session_start();
+if(!isset($_SESSION['login'])) {
+  header('location: alogin.php');
+  exit;
+}
+Else{
+   include 'NaviScrollKlant.php';
+}
 include('templates/header2.inc.php');
 
 if (isset($_POST['submit']))
@@ -40,7 +47,7 @@ $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 </html>
                                                                   <!-- enctype="multipart/form-data" -->
       <div class="container">
-         <form class="form-signin" method="POST" action="addprod.php" >
+         <form class="form-signin" method="POST" action="addprod.php" enctype="multipart/form-data" >
             <h2><b>Product toevoegen</b></h2>
             <br />
             <strong>Catagorie:</strong>
@@ -65,4 +72,4 @@ $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
             <br />           
          </form>
       </div>
-      <?php include 'Footer.php';                 //Roept Footer aan ?>;
+      <?php include 'Footer2.php';                 //Roept Footer aan ?>;

@@ -1,16 +1,16 @@
  <?php
 session_start();
-include 'NaviNoScroll.php';                   //Roept de navigatiebalk aan
-include('templates/header2.inc.php');
-include('delkla.php');
-include('editklant.php');
-
 if(!isset($_SESSION['login'])) {
   header('location: alogin.php');
   exit;
-
-  }
-?>
+}
+Else{
+   include 'NaviScrollKlant.php';
+}
+include('templates/header2.inc.php');
+include('delkla.php');
+include('editklant.php');
+ ?>
 <html>
 <body>
 
