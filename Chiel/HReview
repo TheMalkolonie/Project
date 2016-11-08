@@ -1,0 +1,5 @@
+<?php 
+include 'NaviNoScroll.php'; 				//Roept de navigatiebalk aan
+include 'Reviewpagina.php';					//Roept de informatie van 
+include 'Footer.php';					    	//Roept Footer aan
+?>
