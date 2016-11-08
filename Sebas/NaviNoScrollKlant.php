@@ -10,7 +10,9 @@ ul {
     padding: 0px 0px 0px 0px;
     overflow: hidden;
     background-color: #333;
-	
+    position: fixed;
+    top: 0;
+    width: 100%;			
 }
 
 li {
@@ -20,8 +22,7 @@ li {
 li a {
     display: block;
     color: white;
-    text-align: center;
-    padding: 14px 16px;
+    padding: 16px;
     text-decoration: none;
 }
 
@@ -31,6 +32,12 @@ li a:hover:not(.active) {
 
 .active {
     background-color: #4CAF50;
+}
+
+.main {
+    padding: 16px;
+    margin-top: 30px;
+    height: 1500px; /* Used in this example to enable scrolling */
 }
 </style>
 </head>
@@ -48,9 +55,10 @@ li a:hover:not(.active) {
   <li><a href="DrankenPageKlant.php"><font size="7" face="arial">Dranken</font></a></li>
   <li><a href="SnacksPageKlant.php"><font size="7" face="arial">Snacks</font></a></li>
   
-  <<li><a><font size="4" face="arial">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</font></a></li>
-   <li><a href="UITLOGLINK"><font size="4" face="arial">Uitloggen</font></a></li>
+   <<li><a><font size="4" face="arial">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</font></a></li>
+   <li><a href="logout.php"><font size="4" face="arial">Uitloggen</font></a></li>
    <li><a href="Winkelmandje.php"><img src="winkelmandje plaatje.png" alt="Pizza & Co" style="width:35px;height:35px;border:0;"></a></li> 
+   
 </ul>
 
 
