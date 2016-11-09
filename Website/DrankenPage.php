@@ -11,4 +11,5 @@ Else{
 <center><font size="3" face="arial">Alle dranken komen hier!<br/></font></center>
 
     
-<?php	include 'Footer2.php';?>			//De footer wordt opgehaald
+<?php	include 'Footer2.php';				//De footer wordt opgehaald
+?>			
