@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+/* De navigatiebalk die mee scrollt waarvoor de klant moet inloggen */
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="css/NaviScroll.css" media="screen" />
@@ -6,6 +7,8 @@
 <body>
 <title>Pizza&Co</title>
 
+
+/* De buttons */
 <ul>
   <li><a href="index.php"><img src="images/Pizza & Co Logo.png" alt="Pizza & Co" style="width:85px;height:85px;border:0;"></a></li> 
   <li><a><font size="7" face="arial" color="">Pizza&Co</font></a></li>
