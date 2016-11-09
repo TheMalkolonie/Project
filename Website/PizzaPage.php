@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start();					//Als klant is ingelogd, wordt 'NaviScrollKlant.php' gestart. Zo niet verschijnt 'NaviScroll.php'
 if(!isset($_SESSION['login2'])){
 	include 'NaviScroll.php';
 }
@@ -12,4 +12,4 @@ Else{
 <center><font size="3" face="arial">Alle pizza's komen hier!<br/></font></center>
 
     
-<?php	include 'Footer.php';?>
+<?php	include 'Footer.php';?>				//Haalt de footer op
