@@ -10,7 +10,7 @@ if(!isset($_SESSION['login'])) {
   exit;
 }
 Else{
-   include 'NaviScrollKlant.php';
+   include 'NaviNoScrollKlant.php';
 }
 include('templates/header2.inc.php');
 require('config.php');
@@ -25,7 +25,7 @@ if (isset($_POST['submit']))
  $Wachtwoord2 = $_POST['Wachtwoord2'];
 
    if($Email == $Email2 && $Wachtwoord == $Wachtwoord2)
- {
+    {
    
    $Voornaam = mysql_escape_string($_POST['Voornaam']);
    $Tussenvoegsel = mysql_escape_string($_POST['Tussenvoegsel']);
@@ -56,18 +56,14 @@ if (isset($_POST['submit']))
      <font size="10"><b>Account geregistreerd!</b></font>
       </p>';
    header('Refresh: 3;url=cbeheerder.php');
-   }
- }
+         }
+      }
  else{
        echo '<p style="color: red; text-align: center">
      <font size="10"><b>Sorry, uw Email of wachtwoord komt niet overeen. <br /></b></font>
       </p>';
   header('Refresh: 3;url=bregister.php');
- }
-
-
-
-
+    }
 }
 else{
 $form = <<<EOT

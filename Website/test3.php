@@ -25,10 +25,23 @@
 <html>
 <head>
 <style>
+#content{
+    width: 50%;
+    margin: 20px auto;
+    border: 1px solid $cbcbcb;
+}
+#form{
+    width: 50%;
+    margin: 20px auto;
+}
+#form_div{
+    margin-top: 5px;
+}
 #img_div{
     width: 80%;
     padding: 5px;
     margin: 15px auto;
+    border: 1px solid #cbcbcb;
 }
 #img_div:after{
     content: "";
@@ -44,20 +57,32 @@
 </style>
 </head>
 <body>
+    <div id="content">
 <?php
 //DISPLAY IMAGEs
    include('config.php');
    $result = mysql_query("SELECT * FROM product") 
     or die(mysql_error());
-echo "<center><table border='1' cellpadding='5'></center>";
-  echo "<center><tr> <th>Afbeelding</th> <th>Naam</th> <th>Prijs</th></center>";
+
   while($row = mysql_fetch_array( $result )) {
-    echo "<tr>";
     echo "<div id='img_div'>";
-    echo "<td><img src='images/".$row['Product_Afbeelding']."'></td>";
-    echo '<td>' . $row['Naam'] . '</td>';
-    echo '<td>&euro;' . $row['Prijs'] . '</td>';
-    echo "</tr>"; 
+    echo "<img src='images/".$row['Product_Afbeelding']."'>";
+    echo "<p>".$row['Naam']."</p>";
+    echo '&euro;' . $row['Prijs'] . '<br/>';
     echo "</div>";
   } 
 ?>
+
+
+   <form method="POST" action="test3.php" enctype="multipart/form-data">
+    <input type="hidden" name="size" value="1000000">
+    <div>
+     <input type="file" name="Product_Afbeelding">
+ </div>
+     <input type="text" name="Naam">
+ </div>
+ <div>
+     <input type="submit" name="upload" value="upload image">
+ </div>
+</body>
+</html>

@@ -8,7 +8,7 @@ if(!isset($_SESSION['login2'])) {
   exit;
 }
 Else{
-  include 'NaviScrollKlant.php';
+  include 'NaviNoScrollKlant.php';
 }
 ?>
 <div class="container">

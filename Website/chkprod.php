@@ -5,7 +5,7 @@ if(!isset($_SESSION['login'])) {
   exit;
 }
 Else{
-   include 'NaviScrollKlant.php';
+   include 'NaviNoScrollKlant.php';
 }
 include('templates/header2.inc.php');
 include('deletebeh.php');
@@ -46,7 +46,7 @@ include('editbeh.php');
     echo '<td>' . $row['ID'] . '</td>';
     echo '<td>' . $row['Catagorie'] . '</td>';
     echo '<td>' . $row['Naam'] . '</td>';
-    echo '<td>';?> <center><img src=<?php $row['Product_Afbeelding']; echo '<td><br />' . $row['Product_Afbeelding'] . '</td>'; ?></center> <?php echo '</td>';
+    echo "<td><img src='images/".$row['Product_Afbeelding']."'><center>$row[Product_Afbeelding]</center>";
     echo $msg;
     echo '<td>&euro;' . $row['Prijs'] . '</td>';
     echo '<td><a href="editprod.php?ID=' . $row['ID'] . '">Edit</a></td>';

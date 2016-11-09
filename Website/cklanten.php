@@ -5,7 +5,7 @@ if(!isset($_SESSION['login'])) {
   exit;
 }
 Else{
-   include 'NaviScrollKlant.php';
+   include 'NaviNoScrollKlant.php';
 }
 include('templates/header2.inc.php');
 include('delkla.php');

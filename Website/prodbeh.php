@@ -9,7 +9,7 @@ if(!isset($_SESSION['login'])) {
   exit;
 }
 Else{
-   include 'NaviScrollKlant.php';
+   include 'NaviNoScrollKlant.php';
 }
 ?>
 
