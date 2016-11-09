@@ -1,5 +1,5 @@
-<!-- De footer -->
- <html>
+<html>
+/* De footer voor de homepage */
     </body>
 
         <br/><br/><br/><br/>
