@@ -7,7 +7,6 @@ Else{
 	include 'NaviNoScrollKlant.php';
 } ?>
 <html>
-		<img src="PLAATJE VAN PIZZA" alt="Pizza" style="width:1920px;height:50%;">
 		<center><h2><font size="6" face="arial">Mijn winkelmandje</font></h2></center>
 <center><font size="3" face="arial">ITEMS HIER<br/></font></center>
 </html>
