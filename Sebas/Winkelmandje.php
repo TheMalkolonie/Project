@@ -1,10 +1,10 @@
 <?php
 session_start();				//Als klant is ingelogd, wordt 'NaviScrollKlant.php' gestart. Zo niet verschijnt 'NaviScroll.php'
 if(!isset($_SESSION['login2'])){
-	include 'NaviScroll.php';
+	include 'NaviNoScroll.php';
 }
 Else{
-	include 'NaviScrollKlant.php';
+	include 'NaviNoScrollKlant.php';
 } ?>
 <html>
 		<img src="PLAATJE VAN PIZZA" alt="Pizza" style="width:1920px;height:50%;">
@@ -14,15 +14,6 @@ Else{
 <br/><br/><br/><br/>
 
 <?php
-session_start();							//Als klant is ingelogd, kan hij klikken op bestel nu, als hij niet is ingelogd staat er log in.
-if(!isset($_SESSION['login2'])){
-	include 'BestelButton.php';
-}
-Else{
-	include 'LogInButton.php';
-}
-
-
-
+include 'BestelButton.php';
 include 'Footer2.php';						//De footer wordt opgehaald
 ?> 		
