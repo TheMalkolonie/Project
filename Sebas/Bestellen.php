@@ -25,12 +25,12 @@ Else{
 	
 	
 	<br/><br/><br/><br/>
-	<font size="3" face="arial">Bestellen via <br/></font>
+	<font size="3" face="arial">Betalen via <br/></font>
 	<form>
 	<input type="radio" name="Betaalmethode" value="Afterpay" checked>Afterpay
 	</form>
 	</center>
-	<br/><br/>
+	<br/>
 	
 <?php
 	
