@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+/* De navigatiebalk die niet scrollt waarvoor de klant niet hoeft in te loggen */
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="css/NaviNoScroll.css" media="screen" />
