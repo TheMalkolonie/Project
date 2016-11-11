@@ -35,7 +35,7 @@ Else{
 <?php
 	
 	
-include 'VerzendenButton.php';	//De verzend knop wordt opgehaald
+include 'VerzendenButton.php';		//De verzend knop wordt opgehaald
 include 'Footer2.php';			//De footer wordt opgehaald
 ?> 		
 </body>		
