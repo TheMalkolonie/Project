@@ -1,4 +1,4 @@
-<?php session_start();
+<?php session_start(); // deze tekst van dit bestand komt op een page te staan die wij niet af hebben gekregen.
 if(!isset($_SESSION['login'])) {
   header('location: alogin.php');
   exit;
