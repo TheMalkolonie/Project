@@ -1,4 +1,5 @@
 <?php
+//Een product toevoegen
 include('config.php');
 session_start();
 
@@ -42,13 +43,13 @@ if (isset($_POST['submit']))
             $result = mysql_query("SELECT * FROM catagorie") 
             or die(mysql_error());
             echo '<strong>Catagorie:<br/></strong>';  
-            echo '<select name="Catagorie" required/>'; // Open your drop down box
+            echo '<select name="Catagorie" required/>'; // Opent dropdown box
             echo '<option value="" selected="selected" disabled="disabled">Selecteer Catagorie</option>';
             while($row = mysql_fetch_array( $result )) {
               $catagorie = $row['Catagorie'];
             echo '<option value="'.$catagorie.'">'.$catagorie.'</option>';
             }
-            echo '</select>';// Close your drop down box
+            echo '</select>';// Sluit dropdown box
             ?>
             <br/>
             <strong>Product Naam:</strong><input type="text" autocomplete="off" class="input-block-level" name="Naam" required/>
