@@ -2,18 +2,17 @@
 include('templates/header2.inc.php');
 /*
 EDIT.PHP
-Allows user to edit specific entry in database
+Laat de gebruiker producten toevoegen
 */
-// creates the edit record form
-// since this form is used multiple times in this file, I have made it a function that is easily reusable
+// Dit maakt de edit form
+// function omdat deze form vaker zal worden gebruikt
 function renderForm($id, $Naam, $Product_Afbeelding, $Product_Beschrijving, $Prijs, $Catagorie, $code, $error)
 {
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <?php
 
-// if there are any errors, display them
-
+// Laat errors zien als die er zijn.
 if ($error != '')
 {
 echo '<div style="padding:4px; border:1px solid red; color:red;">'.$error.'</div>';
@@ -81,11 +80,11 @@ if ($Catagorie == '' || $Naam == '' || $Product_Afbeelding == '' || $Product_Bes
 
 {
 
-// generate error message
+// Maakt error bericht aan doordat iets niet is ingevuld
 
 $error = 'ERROR: Please fill in all required fields!';
 
-//error, display form
+//error, laat form zien
 
 renderForm($id, $Catagorie, $Naam, $Product_Afbeelding, $Product_Beschrijving, $Prijs, $code, $error);
 
@@ -95,7 +94,7 @@ else
 
 {
 
-// save the data to the database
+// De data wordt in de database opgeslagen
 
 mysql_query("UPDATE product SET Catagorie='$Catagorie', Naam='$Naam', Product_Afbeelding='$Product_Afbeelding', Product_Beschrijving='$Product_Beschrijving', Prijs='$Prijs', code='$code' WHERE id='$id'") 
 or die(mysql_error());
@@ -103,7 +102,7 @@ move_uploaded_file($_FILES['Product_Afbeelding']['tmp_name'], $target);
 include('IMAGE-RESIZE-SCRIPT.php');
 
 
-// once saved, redirect back to the view page
+// Als het opgeslagen is kun je hier terug komen op de vorige pagina
 header("Location: chkprod.php");
 
 }
@@ -114,7 +113,7 @@ else
 
 {
 
-// if the 'id' isn't valid, display an error
+// error als Id niet klopt
 
 echo 'Error!';
 
@@ -123,14 +122,14 @@ echo 'Error!';
 }
 
 else
-
-// if the form hasn't been submitted, get the data from the db and display the form
+         
+         
 
 {
 
 
 
-// get the 'id' value from the URL (if it exists), making sure that it is valid (checing that it is numeric/larger than 0)
+// checked het id
 
 if (isset($_GET['id']) && is_numeric($_GET['id']) && $_GET['id'] > 0)
 
