@@ -6,14 +6,14 @@
 body {font-family: Verdana,sans-serif;}
 .mySlides {display:none}
 
-/* Slideshow container */
+/* Slideshow inhoud */
 .slideshow-container {
   max-width: 100%;
   position: center;
   margin: left;
 }
 
-/* Caption text */
+/* Eventuele tekst op het plaatje */
 .text {
   color: #f2f2f2;
   font-size: 15px;
@@ -26,7 +26,7 @@ body {font-family: Verdana,sans-serif;}
 
 
 
-/* The dots/bullets/indicators */
+/* De bolletjes die aangeven welk plaatje het is */
 .dot {
   height: 13px;
   width: 13px;
@@ -41,7 +41,7 @@ body {font-family: Verdana,sans-serif;}
   background-color: #717171;
 }
 
-/* Fading animation */
+/* Fading animatie */
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 3s;
@@ -115,7 +115,7 @@ function showSlides() {
     }
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 5000); // Change image every 3 seconds
+    setTimeout(showSlides, 5000); // Veranderd het plaatje elke 5 seconden
 }
 </script>
 
