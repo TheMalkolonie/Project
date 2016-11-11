@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- De navigatiebalk als je niet bent ingelogt die niet mee scrollt  -->
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="css/NaviNoScroll.css" media="screen" />
