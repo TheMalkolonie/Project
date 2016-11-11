@@ -1,4 +1,4 @@
- <?php
+ <?php //teller.php telt het aantal bezoekers op de website.
 session_start();
 include('templates/header2.inc.php');
 
@@ -9,12 +9,12 @@ if(!isset($_SESSION['login'])) {
 Else{
    include 'NaviNoScrollKlant.php';
 }
-include('config.php');
-include('spatie.html');
+include('config.php');            // Nodig om met de database te verbinden
+include('spatie.html');           // maakt de page netjes
 
-$vind_teller = mysql_query("SELECT * FROM teller");
+$vind_teller = mysql_query("SELECT * FROM teller");  
 
-while($row = mysql_fetch_assoc($vind_teller)){
+while($row = mysql_fetch_assoc($vind_teller)){    // haalt informatie op uit de database.
     $huidig_teller = $row['Test'];
     $nieuw_teller = $huidig_teller + 1;
     $update_teller = mysql_query("UPDATE `teller` SET `Test` = $nieuw_teller");
