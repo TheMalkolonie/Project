@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start(); // deze login page is voor bezoekers.
 require('config.php');
 include('templates/header2.inc.php');
 $error = '';
