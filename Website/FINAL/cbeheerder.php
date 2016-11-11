@@ -1,22 +1,22 @@
  <?php
-session_start();                  // sessie wordt gestart.
-if(!isset($_SESSION['login'])) {  // Zodra klant pagina cbeheerder.php wil bereiken wordt deze doorverwezen naar alogin.php
-  header('location: alogin.php');
+session_start(); // sessie wordt gestart.
+if(!isset($_SESSION['login'])) {
+  header('location: alogin.php'); // Zodra klant pagina cbeheerder.php wil bereiken wordt deze doorverwezen naar alogin.php
   exit;
 }
 Else{
-   include 'NaviNoScrollKlant.php';  // Menu balk wordt niet mee gescrolt.
+   include 'NaviNoScrollKlant.php'; // Menu balk wordt niet mee gescrolt.
 }
 include('templates/header2.inc.php'); // Haalt de CSS style bestanden op.
-include('deletebeh.php');     // Optie om als administrator andere administrators te verwijderen.
-include('editbeh.php'); // Optie als administrator om andere administrators te wijzigen.
+include('deletebeh.php'); // Functie om als administrator andere administrators te verwijderen.
+include('editbeh.php'); // Funtie als administrator om andere administrators te wijzigen.
  ?>
 <html>
 <body>
 
 <?php
 
-  include('config.php');  // Maakt connectie met de database.
+  include('config.php'); // Maakt connectie met de database.
 
   $result = mysql_query("SELECT * FROM administrator") 
     or die(mysql_error());  
@@ -29,7 +29,7 @@ include('editbeh.php'); // Optie als administrator om andere administrators te w
   echo "</br>";
   echo "</br>";
   echo "<center><table border='1' cellpadding='5'></center>";
-  echo "<center><tr> <th>ID</th> <th>Gebruikersnaam</th> <th>Voornaam</th> <th>Tussenvoegsel</th> <th>Achternaam</th> <th>Straat</th> <th>Huisnummer</th> <th>Woonplaats</th> <th>Postcode</th> <th>Telefoonnummer</th> <th>Email</th> <th></th> <th></th></tr></center>";
+  echo "<center><tr> <th>id</th> <th>Gebruikersnaam</th> <th>Voornaam</th> <th>Tussenvoegsel</th> <th>Achternaam</th> <th>Straat</th> <th>Huisnummer</th> <th>Woonplaats</th> <th>Postcode</th> <th>Telefoonnummer</th> <th>Email</th> <th></th> <th></th></tr></center>";
 
   while($row = mysql_fetch_array( $result )) { // Haalt onderstaande gegevens op uit de database.
     

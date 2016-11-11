@@ -1,4 +1,4 @@
-<?php								//Als klant is ingelogd, wordt 'NaviScrollKlant.php' gestart. Zo niet verschijnt 'NaviScroll.php'
+<?php				//Als klant is ingelogd, wordt 'NaviScrollKlant.php' gestart. Zo niet verschijnt 'NaviScroll.php'
 if(!isset($_SESSION['login2'])){
 	include 'NaviNoScroll.php';
 }

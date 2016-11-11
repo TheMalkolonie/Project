@@ -1,4 +1,4 @@
-<!DOCTYPE html> <!-- Op deze page kan de bezoeker zich registreren.-->
+<!DOCTYPE html><!-- Op deze page kan een administrator een account registreren voor een bezoeker.-->
 <html>
 <body>
    

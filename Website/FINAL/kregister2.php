@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!-- Op deze page kan de bezoeker zich registreren.-->
 <html>
 <body>
    
@@ -37,12 +37,12 @@ if (isset($_POST['submit']))
    $Postcode = mysql_escape_string($_POST['Postcode']);
    $Woonplaats = mysql_escape_string($_POST['Woonplaats']);
    $Achternaam = mysql_escape_string($_POST['Achternaam']);
-   $Telefoonnummer = mysql_escape_string($_POST['Telefoonnummer']); // informatie wordt in de database gezet
+   $Telefoonnummer = mysql_escape_string($_POST['Telefoonnummer']);
 
 
-   $Wachtwoord = md5($Wachtwoord); //veiligheid
+   $Wachtwoord = md5($Wachtwoord);
    
-   $check = mysql_query("SELECT * FROM klant WHERE Gebruikersnaam = '$Gebruikersnaam'")or die(mysql_error()); // check of de gebruikersnaam al bestaat
+   $check = mysql_query("SELECT * FROM klant WHERE Gebruikersnaam = '$Gebruikersnaam'")or die(mysql_error());
    if (mysql_num_rows($check)>=1) 
     echo '<p style="color: red; text-align: center">
      <font size="10"><b>Gebruikernaam is al in gebruik!</b></font>
@@ -70,7 +70,7 @@ if (isset($_POST['submit']))
 
 
 }
-else{ //Hier staan de dingen die je moet invullen.
+else{
 $form = <<<EOT
       <!-- BEGIN OF CONTENT PART -->
       <div class="container">

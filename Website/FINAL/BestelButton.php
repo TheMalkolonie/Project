@@ -1,8 +1,8 @@
 <hmtl>
-<!-- De stijl van de bestelbutton  -->
+	<!-- De stijl van de bestelbutton  -->
 <head>
 <style>
-input.MyButton {        
+input.MyButton {
 width: 300px;
 padding: 20px;
 cursor: pointer;
@@ -15,8 +15,6 @@ border-radius: 10px;
 -webkit-box-shadow:: 6px 6px 5px #999;
 box-shadow:: 6px 6px 5px #999;
 }
-
-<!-- De stijl van de bestelbutton als je er overheen hovert  -->
 input.MyButton:hover {
 color: #fff;
 background: #1b379b;

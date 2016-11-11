@@ -9,10 +9,10 @@ while($row = mysql_fetch_assoc($vind_teller)){
     $update_teller = mysql_query("UPDATE `teller` SET `Pizza` = $nieuw_teller");
    }
 if(!isset($_SESSION['login']) AND !isset($_SESSION['login2'])){
-	include 'NaviScroll.php';				//Als de gebruiker NIET is ingelogd, wordt 'NaviScroll.php' opgehaald
+	include 'NaviScroll.php'; //Als de gebruiker NIET is ingelogd, wordt 'NaviScroll.php' opgehaald
 }
 Else{
-	include 'NaviScrollKlant.php';				//Als de gebruiker WEL is ingelogd, wordt 'NaviScrollKlant.php' opgehaald
+	include 'NaviScrollKlant.php'; //Als de gebruiker WEL is ingelogd, wordt 'NaviScrollKlant.php' opgehaald
 } ?>
 <!DOCTYPE html>
 <html>
@@ -31,8 +31,8 @@ Else{
 </style>
 <center><font size="3" face="arial"><a href="pizzasamenstellen.php">Stel je eigen pizza samen!</a></center><br/>
 <?php
-   include('config.php'); //Verbinding wordt opgezet met de database, pagina wordt ingeladen.
-   include('spatie.html'); // Pagina waar enters in zitten waardoor de pagina goed wordt weergegeven.
+   include('config.php');
+   include('spatie.html');
    $result = mysql_query("SELECT * FROM `product` WHERE `Catagorie`='Pizza'") 
     or die(mysql_error());
     

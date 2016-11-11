@@ -1,6 +1,6 @@
 <hmtl>
 <head>
-<!-- De stijl van de bestelbutton  -->
+	<!-- De stijl van de bestelbutton  -->
 <style>
 input.MyButton {
 width: 300px;
@@ -15,7 +15,6 @@ border-radius: 10px;
 -webkit-box-shadow:: 6px 6px 5px #999;
 box-shadow:: 6px 6px 5px #999;
 }
-
 <!-- De stijl van de bestelbutton als je er overheen hovert  -->
 input.MyButton:hover {
 color: #fff;
@@ -30,7 +29,7 @@ box-shadow:: 5px 5px 4px #adadad;
 
 <center>
 <form>
-<input class="MyButton" type="button" value="Bestelling Verzenden" onclick="window.location.href='GEENIDEE.php'" />
+<input class="MyButton" type="button" value="Bestelling Verzenden" onclick="window.location.href='error.php'" />
 </form>
 </center>
 </html>

@@ -28,7 +28,7 @@ if(isset($_SESSION["cart_item"])){
     <td><?php echo $item["code"]; ?></td>
     <td><?php echo $item["quantity"]; ?></td>
     <td align=right><?php echo "€".$item["Prijs"]; ?></td>
-    <td><a href="cart.php?action=remove&code=<?php echo $item["code"]; ?>" class="btnRemoveAction">Remove Item</a></td>
+    <td><a href="Winkelmandje.php?action=remove&code=<?php echo $item["code"]; ?>" class="btnRemoveAction">Remove Item</a></td>
     </tr>
     <?php
         $item_total += ($item["Prijs"]*$item["quantity"]);

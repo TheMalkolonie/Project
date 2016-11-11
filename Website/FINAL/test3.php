@@ -1,11 +1,19 @@
 <?php
 session_start();
+include('spatie.html');
 if(!isset($_SESSION['login2'])){
-  include 'NaviNoScroll.php';
+  include 'NaviScroll.php';
 }
 Else{
- include 'NaviNoScrollKlant.php';
+ include 'NaviScrollKlant.php';
 }
+include('templates/header2.inc.php');
+/*
+EDIT.PHP
+Allows user to edit specific entry in database
+*/
+// creates the edit record form
+// since this form is used multiple times in this file, I have made it a function that is easily reusable
 function renderForm($id, $Naam, $Product_Afbeelding, $Product_Beschrijving, $Prijs, $Catagorie, $code, $error)
 {
 ?>
@@ -90,19 +98,19 @@ echo '<div style="padding:4px; border:1px solid red; color:red;">'.$error.'</div
 
 }
 
-
+// connect to the database
 include('config.php');
 
-
+// check if the form has been submitted. If it has, process the form and save it to the database
 if (isset($_POST['submit']))
 
 {
-
+// confirm that the 'id' value is a valid integer before getting the form data
 
 if (is_numeric($_POST['id']))
  {
 
-
+// get form data, making sure it is valid
    $id = $_POST['id'];
    $Catagorie = mysql_real_escape_string(htmlspecialchars($_POST['Catagorie']));
    $Naam = mysql_real_escape_string(htmlspecialchars($_POST['Naam']));
@@ -111,17 +119,17 @@ if (is_numeric($_POST['id']))
    $Prijs = mysql_real_escape_string(htmlspecialchars($_POST['Prijs']));
    $code = mysql_real_escape_string(htmlspecialchars($_POST['code']));
 
-
+// check that firstname/lastname fields are both filled in
 
 if ($Catagorie == '' || $Naam == '' || $Product_Afbeelding == '' || $Product_Beschrijving == '' || $Prijs == '' || $code == '')
 
 {
 
-
+// generate error message
 
 $error = 'ERROR: Please fill in all required fields!';
 
-
+//error, display form
 
 renderForm($id, $Catagorie, $Naam, $Product_Afbeelding, $Product_Beschrijving, $Prijs, $code, $error);
 
@@ -131,13 +139,13 @@ else
 
 {
 
-
+// save the data to the database
 
 mysql_query("UPDATE product SET Catagorie='$Catagorie', Naam='$Naam', Product_Afbeelding='$Product_Afbeelding', Product_Beschrijving='$Product_Beschrijving', Prijs='$Prijs', code='$code' WHERE id='$id'") 
 or die(mysql_error());
 
 
-
+// once saved, redirect back to the view page
 header("Location: chkprod.php");
 
 }
@@ -148,7 +156,7 @@ else
 
 {
 
-
+// if the 'id' isn't valid, display an error
 
 echo 'Error!';
 
@@ -158,17 +166,19 @@ echo 'Error!';
 
 else
 
+// if the form hasn't been submitted, get the data from the db and display the form
 
 {
 
 
 
-
+// get the 'id' value from the URL (if it exists), making sure that it is valid (checing that it is numeric/larger than 0)
 
 if (isset($_GET['id']) && is_numeric($_GET['id']) && $_GET['id'] > 0)
 
 {
 
+// query db
 
 $id = $_GET['id'];
 
@@ -180,7 +190,7 @@ $row = mysql_fetch_array($result);
 
 
 
-
+// check that the 'id' matches up with a row in the databse
 
 if($row)
 
@@ -188,7 +198,7 @@ if($row)
 
 
 
-
+// get data from db
    $Catagorie = $row['Catagorie'];
    $Naam = $row['Naam'];
    $Product_Afbeelding = $row['Product_Afbeelding'];
@@ -198,7 +208,7 @@ if($row)
 
 
 
-
+// show form
 
 renderForm($id, $Naam, $Product_Afbeelding, $Product_Beschrijving, $Prijs, $Catagorie, $code, '');
 
@@ -206,6 +216,7 @@ renderForm($id, $Naam, $Product_Afbeelding, $Product_Beschrijving, $Prijs, $Cata
 
 else
 
+// if no match, display result
 
 {
 
@@ -217,7 +228,7 @@ echo "No results!";
 
 else
 
-
+// if the 'id' in the URL isn't valid, or if there is no 'id' value, display an error
 
 {
 

@@ -1,17 +1,10 @@
 <?php
-include('config.php');
-   $result = mysql_query("SELECT * FROM `product`") 
-    or die(mysql_error());
-
-  while($row = mysql_fetch_array( $result )) {
-     
-
       //indicate which file to resize (can be any type jpg/png/gif/etc...)
-        $file = "images/".$row['Product_Afbeelding']."";
+      $file = 'images/salami.jpg';
 
       //indicate the path and name for the new resized file
-      $resizedFile = "images/2".$row['Product_Afbeelding']."";
-      }
+      $resizedFile = 'images/2salami.jpg';
+
       //call the function (when passing path to pic)
       smart_resize_image($file , null, 250 , 150 , false , $resizedFile , false , false ,100 );
       //call the function (when passing pic as string)

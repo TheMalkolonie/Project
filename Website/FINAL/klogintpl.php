@@ -1,10 +1,10 @@
 <?php 
 session_start();
 if(!isset($_SESSION['login2'])){
-   include 'NaviNoScroll.php';
+   include 'NaviScroll.php';
 }
 Else{
-   include 'NaviNoScrollKlant.php';
+   include 'NaviScrollKlant.php';
 } ?>
 <!-- BEGIN OF CONTENT PART -->
 <div class="container">
@@ -15,9 +15,9 @@ Else{
       <input type="text" autocomplete="off" class="input-block-level" placeholder="Gebruikersnaam" name="username" />
       <input type="password" class="input-block-level" placeholder="Wachtwoord" name="password" />
             <?php if(!empty($error)) { ?>
-      	<div>
-      		<p style="color: red;"><?php echo  $error ?></p>
-      	</div>
+         <div>
+            <p style="color: red;"><?php echo  $error ?></p>
+         </div>
       <?php } ?>
          <p><a href="kregister2.php">Nog geen account? Registreer nu!</a></p>
       <input class="btn btn-large btn-primary" type="button" value="Ga terug" onclick="location.href = 'http://localhost/pizzaenco/';" />
@@ -25,4 +25,5 @@ Else{
    </form>
 </div>
 <!-- END OF CONTENT PART -->
+
 <?php include 'Footer3.php';?>

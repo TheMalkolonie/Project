@@ -1,4 +1,4 @@
- <?php//teller.php telt het aantal bezoekers op de website.
+ <?php
 session_start();
 include('templates/header2.inc.php');
 
@@ -9,17 +9,15 @@ if(!isset($_SESSION['login'])) {
 Else{
    include 'NaviNoScrollKlant.php';
 }
-include('config.php');  // Nodig om met de database te verbinden
-include('spatie.html'); // maakt de page netjes
+include('config.php');
+include('spatie.html');
 
 $vind_teller = mysql_query("SELECT * FROM teller");
 
-while($row = mysql_fetch_assoc($vind_teller)){ // haalt informatie op uit de database.
+while($row = mysql_fetch_assoc($vind_teller)){
     $huidig_teller = $row['Test'];
     $nieuw_teller = $huidig_teller + 1;
-    $update_teller = mysql_query("UPDATE `teller` SET `Test` = $nieuw_teller"); // update teller met nieuwe waarde.
-
-    echo '<center><h2><b>Bezoekers Aantal</b></h2></center><br/>';
+    $update_teller = mysql_query("UPDATE `teller` SET `Test` = $nieuw_teller");
 
    $result = mysql_query("SELECT * FROM teller") 
     or die(mysql_error());
@@ -28,12 +26,12 @@ echo "<center><table border='1' cellpadding='5'></center>";
   while($row = mysql_fetch_array( $result )) {
     
     echo "<tr>";
-    echo '<td><center>' . $row['Home'] . ' Bezoekers</center></td>';
-    echo '<td><center>' . $row['Pizza'] . ' Bezoekers</center></td>';
-    echo '<td><center>' . $row['Dessert'] . ' Bezoekers</center></td>';
-    echo '<td><center>' . $row['Drank'] . ' Bezoekers</center></td>';
-    echo '<td><center>' . $row['Snacks'] . ' Bezoekers</center></td>';
-    echo '<td><center>' . $row['Test'] . ' Bezoekers</center></td>';
+    echo '<td><center>' . $row['Home'] . '</center></td>';
+    echo '<td><center>' . $row['Pizza'] . '</center></td>';
+    echo '<td><center>' . $row['Dessert'] . '</center></td>';
+    echo '<td><center>' . $row['Drank'] . '</center></td>';
+    echo '<td><center>' . $row['Snacks'] . '</center></td>';
+    echo '<td><center>' . $row['Test'] . '</center></td>';
     echo "</tr>"; 
   }
     echo "</table>"; 

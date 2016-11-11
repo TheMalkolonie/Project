@@ -1,5 +1,5 @@
 <?php 
-session_start(); // deze login page is alleen voor administrators. 
+session_start(); // deze login page is alleen voor administrators.
 if(!isset($_SESSION['login']) AND !isset($_SESSION['login2'])){
    include 'NaviNoScroll.php';
 }

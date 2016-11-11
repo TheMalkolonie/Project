@@ -1,6 +1,5 @@
 <?php
-session_start();
-include('teller.php');				//Als klant is ingelogd, wordt 'NaviScrollKlant.php' gestart. Zo niet verschijnt 'NaviScroll.php'
+session_start();				//Als klant is ingelogd, wordt 'NaviScrollKlant.php' gestart. Zo niet verschijnt 'NaviScroll.php'
 if(!isset($_SESSION['login2'])){
 	include 'NaviNoScroll.php';
 }
@@ -35,7 +34,7 @@ Else{
 <?php
 	
 	
-include 'VerzendenButton.php';		//De verzend knop wordt opgehaald
+include 'VerzendenButton.php';	//De verzend knop wordt opgehaald
 include 'Footer2.php';			//De footer wordt opgehaald
 ?> 		
 </body>		

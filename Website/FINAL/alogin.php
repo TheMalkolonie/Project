@@ -1,7 +1,7 @@
 <?php
 //Inloggen voor administrators
-session_start();                                                     //De sessie wordt gestart
-require('config.php');
+session_start();
+require('config.php'); //De sessie wordt gestart
 include('templates/header2.inc.php');
 $error = '';
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -26,8 +26,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
       include('logintpl.php');
    }
 } else {
-   include('logintpl.php');                                    //Roept logintemplate aan
-include('templates/footer.inc.php');
-include 'Footer2.php';                                         //Roept Footer aan
+   include('logintpl.php');
+include('templates/footer.inc.php'); //Roept logintemplate aan
+include 'Footer2.php'; //Roept Footer aan
 }
 ?>

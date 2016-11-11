@@ -1,7 +1,6 @@
 <?php
 include('templates/header2.inc.php');
 /*
-EDIT.PHP
 Laat de gebruiker producten toevoegen
 */
 // Dit maakt de edit form
@@ -13,6 +12,7 @@ function renderForm($id, $Naam, $Product_Afbeelding, $Product_Beschrijving, $Pri
 <?php
 
 // Laat errors zien als die er zijn.
+
 if ($error != '')
 {
 echo '<div style="padding:4px; border:1px solid red; color:red;">'.$error.'</div>';
@@ -52,20 +52,20 @@ echo '<div style="padding:4px; border:1px solid red; color:red;">'.$error.'</div
 
 }
 
-// connect to the database
+// connect met database
 include('config.php');
 
-// check if the form has been submitted. If it has, process the form and save it to the database
+// controleren of het formulier is ingediend. Als het verwerken van de vorm en op te slaan in de database
 if (isset($_POST['submit']))
 
 {
 $target = "images/".basename($_FILES['Product_Afbeelding']['name']);
-// confirm that the 'id' value is a valid integer before getting the form data
+// bevestigen dat de 'id' waarde een geldige integer voordat je het formulier gegevens
 
 if (is_numeric($_POST['id']))
  {
 
-// get form data, making sure it is valid
+// krijgt vorm gegevens, zorg ervoor dat geldig is
    $id = $_POST['id'];
    $Catagorie = mysql_real_escape_string(htmlspecialchars($_POST['Catagorie']));
    $Naam = mysql_real_escape_string(htmlspecialchars($_POST['Naam']));
@@ -74,17 +74,17 @@ if (is_numeric($_POST['id']))
    $Prijs = mysql_real_escape_string(htmlspecialchars($_POST['Prijs']));
    $code = mysql_real_escape_string(htmlspecialchars($_POST['code']));
 
-// check that firstname/lastname fields are both filled in
+// controleer of voornaam / achternaam velden beide zijn ingevuld
 
 if ($Catagorie == '' || $Naam == '' || $Product_Afbeelding == '' || $Product_Beschrijving == '' || $Prijs == '' || $code == '')
 
 {
 
-// Maakt error bericht aan doordat iets niet is ingevuld
+// genereren foutmelding
 
 $error = 'ERROR: Please fill in all required fields!';
 
-//error, laat form zien
+//error weergave form
 
 renderForm($id, $Catagorie, $Naam, $Product_Afbeelding, $Product_Beschrijving, $Prijs, $code, $error);
 
@@ -94,7 +94,7 @@ else
 
 {
 
-// De data wordt in de database opgeslagen
+// opslaan van de gegevens in de database
 
 mysql_query("UPDATE product SET Catagorie='$Catagorie', Naam='$Naam', Product_Afbeelding='$Product_Afbeelding', Product_Beschrijving='$Product_Beschrijving', Prijs='$Prijs', code='$code' WHERE id='$id'") 
 or die(mysql_error());
@@ -102,7 +102,7 @@ move_uploaded_file($_FILES['Product_Afbeelding']['tmp_name'], $target);
 include('IMAGE-RESIZE-SCRIPT.php');
 
 
-// Als het opgeslagen is kun je hier terug komen op de vorige pagina
+// eens gered, redirect terug naar de weergave pagina
 header("Location: chkprod.php");
 
 }
@@ -113,7 +113,7 @@ else
 
 {
 
-// error als Id niet klopt
+// als het "id" niet geldig is, weergave een fout melding
 
 echo 'Error!';
 
@@ -122,14 +122,14 @@ echo 'Error!';
 }
 
 else
-         
-         
+
+// Als het formulier niet is ingediend, krijgt de gegevens uit de database en de vorm weergegeven
 
 {
 
 
 
-// checked het id
+// krijgen de 'id' waarde van de URL (indien aanwezig), zorg ervoor dat deze geldig is (checing dat het numeriek / groter is dan 0)
 
 if (isset($_GET['id']) && is_numeric($_GET['id']) && $_GET['id'] > 0)
 
@@ -147,7 +147,7 @@ $row = mysql_fetch_array($result);
 
 
 
-// check that the 'id' matches up with a row in the databse
+// controleer of de 'id' overeen komt met een rij in de database
 
 if($row)
 
@@ -155,7 +155,7 @@ if($row)
 
 
 
-// get data from db
+// krijgt gegevens van database
    $Catagorie = $row['Catagorie'];
    $Naam = $row['Naam'];
    $Product_Afbeelding = $row['Product_Afbeelding'];
@@ -165,7 +165,7 @@ if($row)
 
 
 
-// show form
+// weergave form
 
 renderForm($id, $Naam, $Product_Afbeelding, $Product_Beschrijving, $Prijs, $Catagorie, $code, '');
 
@@ -173,7 +173,7 @@ renderForm($id, $Naam, $Product_Afbeelding, $Product_Beschrijving, $Prijs, $Cata
 
 else
 
-// if no match, display result
+// als er geen match, weergave van het resultaat
 
 {
 
@@ -185,7 +185,7 @@ echo "No results!";
 
 else
 
-// if the 'id' in the URL isn't valid, or if there is no 'id' value, display an error
+// Als de 'id in de URL niet geldig is, of indien er geen "id" waarde, vertonen een fout
 
 {
 

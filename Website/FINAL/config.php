@@ -1,6 +1,6 @@
 <?php
-mysql_connect("localhost", "root", "");     
-mysql_select_db("projdata");                    //zorgt ervoor dat de database geconnect wordt
+mysql_connect("localhost", "root", ""); // maakt verbinding met database HOST - GEBRUIKER - WACHTWOORD
+mysql_select_db("projdata"); // Kies database
 
 
 ?>
