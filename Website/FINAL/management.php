@@ -1,5 +1,5 @@
 <!DOCTYPE html>
- <?php
+ <?php // deze page is voor de beheerder/management, ze vanaf hier naar andere beheerder pagina's
 session_start();
 include('templates/header2.inc.php');
 
