@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('config.php');
+include('config.php'); //Verbinding wordt opgezet met de database, pagina wordt ingeladen.
 $vind_teller = mysql_query("SELECT * FROM teller");
 
 while($row = mysql_fetch_assoc($vind_teller)){
@@ -31,8 +31,8 @@ Else{
 </style>
 <center><font size="3" face="arial"><a href="pizzasamenstellen.php">Stel je eigen pizza samen!</a></center><br/>
 <?php
-   include('config.php');
-   include('spatie.html');
+   include('config.php'); //Verbinding wordt opgezet met de database, pagina wordt ingeladen.
+   include('spatie.html'); // Pagina waar enters in zitten waardoor de pagina goed wordt weergegeven.
    $result = mysql_query("SELECT * FROM `product` WHERE `Catagorie`='Pizza'") 
     or die(mysql_error());
     
@@ -45,7 +45,7 @@ Else{
     echo '<p><center>&euro;' . $row['Prijs'] . '</center></p>';
     echo '</div>';
     } 
-    include('footer2.php');
+    include('footer2.php'); // Inladen van footer2, de balk onderin de webpagina.
 ?>
 </body>
 </html>
