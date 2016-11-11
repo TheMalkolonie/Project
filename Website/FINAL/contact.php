@@ -1,10 +1,10 @@
 <?php
-session_start();
+session_start();                                                  //De sessie wordt gestart
 if(!isset($_SESSION['login2'])){
-  include 'NaviNoScroll.php';
+  include 'NaviNoScroll.php';                                     //Als de bezoeker  NIET is ingelogd wordt de 'NaviNoScroll.php' opgehaald
 }
 Else{
-  include 'NaviNoScrollKlant.php';
+  include 'NaviNoScrollKlant.php';                                //Als de bezoeker  WEL is ingelogd wordt de 'NaviNoScrollKlant.php' opgehaald
 } ?>
 <html>
 <center> 
