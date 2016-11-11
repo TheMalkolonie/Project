@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION['login'])) {
+if(!isset($_SESSION['login'])) { //klant moet ingelogd zijn
   header('location: alogin.php');
   exit;
 }
@@ -21,7 +21,7 @@ include('templates/header2.inc.php');
  }
  ?> 
  
-<div class="container">
+<div class="container"> //Hier kan de informatie aangepast worden.
          <form class="form-signin" method="POST" action="">
             <input type="hidden" name="id" value="<?php echo $id; ?>"/>
             <h2>Klant bewerken</h2>
@@ -67,7 +67,7 @@ include('templates/header2.inc.php');
  $Email = mysql_real_escape_string(htmlspecialchars($_POST['Email']));
  $Gebruikersnaam = mysql_real_escape_string(htmlspecialchars($_POST['Gebruikersnaam']));
 
- 
+ // checked of alles is ingevuld
  if ($Voornaam == '' || $Tussenvoegsel == '' || $Achternaam == '' || $Straat == '' || $Huisnummer == '' || $Postcode = '' || $Woonplaats == '' || $Telefoonnummer == '' || $Email == ''|| $Gebruikersnaam == '')
  {
 
