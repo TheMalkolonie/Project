@@ -3,11 +3,11 @@
 session_start();
 if(!isset($_SESSION['login2'])){
   include 'NaviNoScroll.php';
-  header('location: klogin.php');
+  header('location: klogin.php');		//Als de gebruiker NIET is ingelogd, wordt 'NaviNoScroll.php' opgehaald
   exit;
 }
 Else{
-  include 'NaviNoScrollKlant.php';
+  include 'NaviNoScrollKlant.php';		//Als de gebruiker WEL is ingelogd, wordt 'NaviNoScrollKlant.php' opgehaald
 };
 ?>
 <html>
@@ -36,13 +36,13 @@ Else{
 			<?php
             $result = mysql_query("SELECT * FROM product") 
             or die(mysql_error()); 
-            echo '<select name="Product" required/>'; // Open your drop down box
+            echo '<select name="Product" required/>'; // Opent dropdown box
             echo '<option value="" selected="selected" disabled="disabled">Selecteer Product</option>';
             while($row = mysql_fetch_array( $result )) {
               $Naam = $row['Naam'];
             echo '<option value="'.$Naam.'">'.$Naam.'</option>';
             }
-            echo '</select>';// Close your drop down box
+            echo '</select>';// Sluit dropdown box
             ?>
 
 			<h4>Geef het product een cijfer.</h4>
