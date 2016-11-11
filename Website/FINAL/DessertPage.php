@@ -1,18 +1,18 @@
-<?php
-session_start();
-include('config.php');
-$vind_teller = mysql_query("SELECT * FROM teller");
+<?php								
+session_start();							//Start de sessie
+include('config.php');							//De database wordt geconnect
+$vind_teller = mysql_query("SELECT * FROM teller");			
 
 while($row = mysql_fetch_assoc($vind_teller)){
     $huidig_teller = $row['Dessert'];
     $nieuw_teller = $huidig_teller + 1;
     $update_teller = mysql_query("UPDATE `teller` SET `Dessert` = $nieuw_teller");
 }
-if(!isset($_SESSION['login']) AND !isset($_SESSION['login2'])){
-	include 'NaviScroll.php';
+if(!isset($_SESSION['login']) AND !isset($_SESSION['login2'])){			//Als de gebruiker NIET is ingelogd wordt 'NaviScroll.php opgehaald
+	include 'NaviScroll.php';	
 }
 Else{
-	include 'NaviScrollKlant.php';
+	include 'NaviScrollKlant.php';						//Als de gebruiker WEL is ingelogd wordt 'NaviScrollKlant.php opgehaald
 } ?>
 <!DOCTYPE html>
 <html>
@@ -44,7 +44,7 @@ Else{
     echo '<p><center>&euro;' . $row['Prijs'] . '</center></p>';
     echo '</div>';
     } 
-    include('footer2.php');
+    include('footer2.php');							//De footer wordt geincluded
 ?>
 </body>
 </html>
