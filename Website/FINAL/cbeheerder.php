@@ -1,29 +1,29 @@
  <?php
-session_start();
-if(!isset($_SESSION['login'])) {
+session_start();                  // sessie wordt gestart.
+if(!isset($_SESSION['login'])) {  // Zodra klant pagina cbeheerder.php wil bereiken wordt deze doorverwezen naar alogin.php
   header('location: alogin.php');
   exit;
 }
 Else{
-   include 'NaviNoScrollKlant.php';
+   include 'NaviNoScrollKlant.php';  // Menu balk wordt niet mee gescrolt.
 }
-include('templates/header2.inc.php');
-include('deletebeh.php');
-include('editbeh.php');
+include('templates/header2.inc.php'); // Haalt de CSS style bestanden op.
+include('deletebeh.php');     // Optie om als administrator andere administrators te verwijderen.
+include('editbeh.php'); // Optie als administrator om andere administrators te wijzigen.
  ?>
 <html>
 <body>
 
 <?php
 
-  include('config.php');
+  include('config.php');  // Maakt connectie met de database.
 
   $result = mysql_query("SELECT * FROM administrator") 
     or die(mysql_error());  
 
-  echo "<center><h1><b>Administrators beheren</b></h1></center>";
+  echo "<center><h1><b>Administrators beheren</b></h1></center>"; //Tekst administrators beheren.
 ?>
-<?php include('clockblack.php'); ?>
+<?php include('clockblack.php'); ?> <!-- Haalt de systeemtijd op  en zet deze in de menu.-->
   <?php
   echo "</br>";
   echo "</br>";
@@ -31,7 +31,7 @@ include('editbeh.php');
   echo "<center><table border='1' cellpadding='5'></center>";
   echo "<center><tr> <th>ID</th> <th>Gebruikersnaam</th> <th>Voornaam</th> <th>Tussenvoegsel</th> <th>Achternaam</th> <th>Straat</th> <th>Huisnummer</th> <th>Woonplaats</th> <th>Postcode</th> <th>Telefoonnummer</th> <th>Email</th> <th></th> <th></th></tr></center>";
 
-  while($row = mysql_fetch_array( $result )) {
+  while($row = mysql_fetch_array( $result )) { // Haalt onderstaande gegevens op uit de database.
     
     echo "<tr>";
     echo '<td>' . $row['id'] . '</td>';
@@ -52,7 +52,7 @@ include('editbeh.php');
 
   echo "</table>";
 ?>
-<p><a href="bregister.php">Voeg nieuwe beheerder toe</a></p>
+<p><a href="bregister.php">Voeg nieuwe beheerder toe</a></p> <!-- Doorverwijzing om nieuwe beheerder toetevoegen. -->
 <br />
 <br />
 <br />
