@@ -9,10 +9,10 @@ while($row = mysql_fetch_assoc($vind_teller)){
     $update_teller = mysql_query("UPDATE `teller` SET `Pizza` = $nieuw_teller");
    }
 if(!isset($_SESSION['login']) AND !isset($_SESSION['login2'])){
-	include 'NaviScroll.php';
+	include 'NaviScroll.php';				//Als de gebruiker NIET is ingelogd, wordt 'NaviScroll.php' opgehaald
 }
 Else{
-	include 'NaviScrollKlant.php';
+	include 'NaviScrollKlant.php';				//Als de gebruiker WEL is ingelogd, wordt 'NaviScrollKlant.php' opgehaald
 } ?>
 <!DOCTYPE html>
 <html>
