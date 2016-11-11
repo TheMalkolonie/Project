@@ -1,4 +1,4 @@
-<!-- De footer -->
+<!-- De footer voor de homepage -->
  <html>
     </body>
 
