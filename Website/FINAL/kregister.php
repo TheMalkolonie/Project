@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Op deze page kan de bezoeker zich registreren.-->
 <html>
 <body>
    
