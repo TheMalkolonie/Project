@@ -1,4 +1,4 @@
-<?php
+<?php // homepage van de website.
 session_start();
 include('config.php');
 $vind_teller = mysql_query("SELECT * FROM teller");
