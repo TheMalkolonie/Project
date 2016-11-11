@@ -1,5 +1,6 @@
 <?php
-session_start();
+//Inloggen voor administrators
+session_start();                                                     //De sessie wordt gestart
 require('config.php');
 include('templates/header2.inc.php');
 $error = '';
@@ -25,8 +26,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
       include('logintpl.php');
    }
 } else {
-   include('logintpl.php');
+   include('logintpl.php');                                    //Roept logintemplate aan
 include('templates/footer.inc.php');
-include 'Footer2.php'; //Roept Footer aan
+include 'Footer2.php';                                         //Roept Footer aan
 }
 ?>
