@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Knoppen van menu -->
  <?php
 session_start();
 include('templates/header2.inc.php');
