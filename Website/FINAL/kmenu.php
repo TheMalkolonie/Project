@@ -1,5 +1,6 @@
 <!DOCTYPE html>
- <?php<!-- Knoppen van klantenmenu -->
+<!-- Knoppen van klantenmenu -->
+ <?php
 session_start();
 include('templates/header2.inc.php');
 
