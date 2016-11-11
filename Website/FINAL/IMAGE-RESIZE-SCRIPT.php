@@ -1,5 +1,6 @@
 <?php
-include('config.php');
+//script om images te kunnen resizen zodat ze de juiste grootte hebben
+include('config.php');                                         //Er wordt een connectie met de database gemaakt
    $result = mysql_query("SELECT * FROM `product`") 
     or die(mysql_error());
 
